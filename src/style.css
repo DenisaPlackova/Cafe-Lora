@@ -244,8 +244,16 @@ nav a:hover {
   background-size: cover;
   background-position: top center;
   background-attachment: fixed;
+
+  display: flex;
+  align-items: center;
 }
 
+.gallery p {
+  padding: 2rem;
+  font-size: 2rem;
+  background-color: rgba(51, 51, 51, 0.441);
+}
 .contacts {
   margin-bottom: 4rem;
 
