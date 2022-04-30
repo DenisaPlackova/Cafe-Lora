@@ -1,5 +1,5 @@
 import './style.css';
-
+import { layer } from './Layer/index.js';
 console.log('funguju!');
 
 /* schovávání navigae*/
@@ -34,4 +34,16 @@ objednavka.addEventListener('click', () => {
     drinkCup.classList.remove('drink__cup--selected');
     ordered = false;
   }
+});
+
+/* ingredience jako komponenty */
+const cappuccino = [
+  { color: '#feeeca', label: 'mléčná pěna' },
+  { color: '#fed7b0', label: 'teplé mléko' },
+  { color: '#613916', label: 'espresso' },
+];
+
+const drinkInfo = document.querySelector('.drink__info');
+cappuccino.forEach((item) => {
+  drinkInfo.appendChild(layer(item));
 });
